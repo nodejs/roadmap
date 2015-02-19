@@ -77,10 +77,10 @@
 			<p>We have the largest package ecosystem of any language, we can't break it.</p>
 		</blockquote>
 		<ul>
-			<li>Never break backward compatibility in the JS API.</li>
+			<li>We do not remove JS API.</li>
 			<li>Semantic Versioning
 				<ul>
-					<li>Any API addition means a *minor* version increment.</li>
+					<li>Any API addition means a <em>minor</em> version increment.</li>
 					<li>Changes in v8's C++ API handled by <a href="https://github.com/rvagg/nan"><code>nan</code></a> mean a <em>minor</em> version increment and a <em>major</em> increment if they cannot.</li>
 				</ul>
 			</li>
@@ -129,7 +129,7 @@
 			<li>Fix all existing compatibility issues.</li>
       <li>Simplify stream usage and creation to avoid user error.</li>
 			<li>Implement WHATWG Streams interface and identify compatibility issues.</li>
-			<li>Work with WHATWG Streams group to ensure compatibility.</li>
+			<li>Improve stream performance.</li>
 		</ol>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Contributors welcome!</p>
 	</div></section>
@@ -139,8 +139,8 @@
 
 		<ol>
 			<li><strong>New</strong> release lines will ship with stable and supported dependencies.</li>
-			<li>Patch releases of older lines will be published for as long as people are sending patches.</li>
-			<li>iojs will take responsibity for versions of v8 and other dependencies that appear in prior releases when their maintainers stop supporting them.</li>
+			<li>Patch releases of older lines will be published for as long as people are actively contributing.</li>
+			<li>io.js will take responsibity for old versions of dependencies like v8 that appear in prior releases when their maintainers stop supporting them.</li>
 		</ol>
 		<br>
 		<p class="note">Summary from <a href="https://github.com/iojs/io.js/issues/725">Stability Policy</a> draft. Contributors welcome!</p>

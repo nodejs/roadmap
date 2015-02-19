@@ -61,16 +61,6 @@
 		<p class="note">Concerns list compiled from the <a href="https://github.com/iojs/roadmap">roadmap</a> project. Contributors welcome!</p>
 	</div></section>
 
-	<!-- <section class="slide"><div>
-		<h2>Serious Citations</h2>
-		<figure>
-			<blockquote>
-				<p>A thing is right when it tends to preserve the integrity, stability and beauty of the biotic community. It is wrong when it tends otherwise.</p>
-			</blockquote>
-			<figcaption>Aldo Leopold</figcaption>
-		</figure>
-	</div></section> -->
-
 	<section class="slide"><div style="padding-top:50px;">
 		<h2>Stability Policy</h2>
 		<blockquote>
@@ -114,34 +104,34 @@
 		<blockquote>
 			<p>Core should enable a massive and diverse ecosystem of debugging and tracing tools rather than endorse high level abstractions like <code>domains</code>.</p>
 		</blockquote>
-		<ol>
+		<ul>
 			<li>Feed in to v8's <code>trace_event</code>.</li>
 			<li>Document and promote tool building on top of <code>trace_event</code>.</li>
 			<li>Unify system tracing endpoing (dtrace, LTTng, etc)</li>
-		</ol>
+		</ul>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Contributors welcome!</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Streams</h2>
-		<ol>
+		<ul>
 			<li><strong>Streams Working Group</strong> has taken over <code>readable-stream</code> which is now the official io.js <code>stream</code> module.
 			<li>Fix all existing compatibility issues.</li>
       <li>Simplify stream usage and creation to avoid user error.</li>
 			<li>Implement WHATWG Streams interface and identify compatibility issues.</li>
 			<li>Improve stream performance.</li>
-		</ol>
+		</ul>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Contributors welcome!</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Long Term Support</h2>
 
-		<ol>
+		<ul>
 			<li><strong>New</strong> release lines will ship with stable and supported dependencies.</li>
 			<li>Patch releases of older lines will be published for as long as people are actively contributing.</li>
 			<li>io.js will take responsibity for old versions of dependencies like v8 that appear in prior releases when their maintainers stop supporting them.</li>
-		</ol>
+		</ul>
 		<br>
 		<p class="note">Summary from <a href="https://github.com/iojs/io.js/issues/725">Stability Policy</a> draft. Contributors welcome!</p>
 	</div></section>
@@ -174,57 +164,6 @@
 		<p class="note">Summary from <a href="https://github.com/iojs/io.js/issues/725">Stability Policy</a> draft. Contributors welcome!</p>
 	</div></section>
 
-<!--
-	<section class="slide"><div>
-		<h2>Code Samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</div></section>
-
-	<section class="slide cover" id="Picture"><div>
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="">
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</div></section>
-	<section class="slide shout"><div>
-		<h2>You can even shout this way</h2>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Inner Navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</div></section>
-	<section class="slide shout" id="SeeMore"><div>
-		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-			#SeeMore h2 {
-				font-size:100px
-				}
-			#SeeMore img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</div></section> -->
 	<p class="badge"><a href="https://github.com/iojs/website">Fork me on Github</a></p>
 	<!--
 		To hide progress bar from entire presentation

@@ -75,7 +75,7 @@
 				</ul>
 			</li>
 		</ul>
-			<p class="note">From the <a href="https://github.com/iojs/io.js/issues/725">Stability & Compatibility Policy</a> draft, still under development.</p>
+			<p class="note">From the <a href="https://github.com/iojs/io.js/pull/886">Stability Policy</a> still under development. Contributors welcome!</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -87,16 +87,16 @@
 		</tr>
 		<tr>
 			<th scope="row">Canary</th>
-			<td>Nightly builds with latest v8 & other new features.</td>
+			<td>Nightly builds with Canary V8 & other new features.</td>
 		</tr>
 		<tr>
 			<th scope="row">NG</th>
-			<td>Nightly builds of Next Generation ES6/7 centric API.</td>
+			<td>Next Generation ES6/7 centric API.</td>
 		</tr>
 		</table>
 		<br>
 		<br>
-		<p class="note">From the <a href="https://github.com/iojs/roadmap/issues/14">roadmap</a> draft, still under development.</p>
+		<p class="note">From the <a href="https://github.com/iojs/roadmap/issues/14">Roadmap</a>, still under development. Contributors welcome!</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -105,9 +105,9 @@
 			<p>Core should enable a massive and diverse ecosystem of debugging and tracing tools rather than endorse high level abstractions like <code>domains</code>.</p>
 		</blockquote>
 		<ul>
-			<li>Feed in to v8's <code>trace_event</code>.</li>
-			<li>Document and promote tool building on top of <code>trace_event</code>.</li>
-			<li>Unify system tracing endpoing (dtrace, LTTng, etc)</li>
+			<li>Integrate with <code>trace_event</code> (New trace API for V8 & Chrome).</li>
+			<li>Document and evangelize a debugging ecosystem.</li>
+			<li>Unify system tracing endpoint (DTrace, LTTng, etc)</li>
 		</ul>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Contributors welcome!</p>
 	</div></section>
@@ -115,10 +115,10 @@
 	<section class="slide"><div>
 		<h2>Streams</h2>
 		<ul>
-			<li><strong>Streams Working Group</strong> has taken over <code>readable-stream</code> which is now the official io.js <code>stream</code> module.
+			<li><strong>Streams Working Group</strong> has taken over <code>readable-stream</code>, which is now the official io.js <code>stream</code> module.
 			<li>Fix all existing compatibility issues.</li>
-      <li>Simplify stream usage and creation to avoid user error.</li>
-			<li>Implement WHATWG Streams interface and identify compatibility issues.</li>
+      <li>Simplify stream creation to avoid user error.</li>
+			<li>Explore <a href="https://github.com/whatwg/streams">WHATWG Streams</a> interface and identify compatibility issues.</li>
 			<li>Improve stream performance.</li>
 		</ul>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Contributors welcome!</p>
@@ -128,8 +128,8 @@
 		<h2>Long Term Support</h2>
 
 		<ul>
-			<li><strong>New</strong> release lines will ship with stable and supported dependencies.</li>
-			<li>Patch releases of older lines will be published for as long as people are actively contributing.</li>
+			<li>New release lines will ship with stable and supported dependencies.</li>
+			<li>Patch releases of older versions will be published for as long as people are actively contributing.</li>
 			<li>io.js will take responsibity for old versions of dependencies like v8 that appear in prior releases when their maintainers stop supporting them.</li>
 		</ul>
 		<br>
@@ -140,8 +140,8 @@
 		<h2>NG (Next Generation)</h2>
 
 		<ul>
-			<li>Provide a new stdlib API to <code>import</code>.</li>
-			<li><code>require()</code> remains backwards compatible indefinitely.</li>
+			<li>A new platform for modern JavaScript Applications.</li>
+			<li>Will remain backward compatible indefinitely.</li>
 			<li>New APIs can be ES6/7 centric without breaking old modules and API.</li>
 			<li>Seperates work on future API from improvements to the current platform.</li>
 		</ul>
@@ -158,7 +158,7 @@
 				<ul>
 					<li>Autonomous language communities (29 registered so far)</li>
 					<li>Evangelism efforts to grow membership (160+ members so far)</li>
-					<li>Improve tooling for translating website, API docs, and evangelism slide decks.</li>
+					<li>Improve tooling for translating website, API docs, installers and slide decks.</li>
 				</ul>
 		</ul>
 		<p class="note">Summary from <a href="https://github.com/iojs/io.js/issues/725">Stability Policy</a> draft. Contributors welcome!</p>

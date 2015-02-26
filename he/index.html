@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="he" >
+<head>
+	<title>io.js מפת הדרכים של</title>
+	<base href="../" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list" dir="rtl">
+	<header class="caption">
+		<h1>מפת הדרכים של io.js</h1>
+		<p>מסמך חי: עדכון אחרון ב27 לפברואר 2015</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>העתיד הבהיר של io.js</h2>
+		<p>מפת דרכים מונעת קהילה</p>
+		<img src="pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+
+			.he-badge{
+				position:absolute;top:0;left:0;display:none;overflow:hidden;visibility:hidden;width:11em;height:11em;line-height:2.5;font-size:15px
+			}
+				.he-badge a{position:absolute;bottom:50%;right:-50%;left:-50%;visibility:visible;background:#4B86C2;box-shadow:0 0 1em rgba(0,0,0,.3);color:#FFF;text-decoration:none;text-align:center;-webkit-transform-origin:50% 100%;-ms-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-transform:rotate(-45deg)translateY(-1em);-ms-transform:rotate(-45deg)translateY(-1em);transform:rotate(-45deg)translateY(-1em);
+				}
+				.he-badge a:hover{
+					background:#568ec6;
+				}
+			@media screen {
+				.he-badge {
+					display: block;
+				}
+			}
+			.slide:after{
+				left:759px;
+			}
+			.slide table th{
+				text-align: right;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>בשביל הקהילה, מאת הקהילה</h2>
+		<p><strong>io.js</strong> הוא תחליף node.js שתואם לכל המודולים ב<strong>npm</strong>.
+		</p>
+		<p><strong>io.js</strong> הוא פרוייקט קוד פתוח מונע קהילה. הפרויקט נוצר על ידי מפתחי ליבה מnode.js אך כבר צבר יותר מפתחים משהיו לnode.js בכל ההיסטוריה של הפרויקט</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>מה אנשים רוצים מio.js?</h2>
+		<ol>
+			<li>יציבות</li>
+			<li>שקיפות (קלות בדיבוג הקוד)</li>
+			<li>Streams יותר טובים</li>
+			<li>תמיכה לטווח רחוק</li>
+			<li>אימוץ סטנדרטים קיימים</li>
+			<li>תמיכה בריבוי שפות</li>
+		</ol>
+		<p class="note">רשימת מטרות ומשימות נוצרה מפרוייקט <a href="https://github.com/iojs/roadmap">מפת הדרכים</a>. נשמח לעזרה!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>מדיניות יציבות</h2>
+		
+			<p>יש לנו את מערכת החבילות הגדולה בעולם. אנחנו לא הולכים לשבור אותה!</p>
+		
+		<ul>
+			<li>אנחנו לא שוברים ממשקי תכנות.</li>
+			<li><a href="http://semver.org">מודל גרסאות סמנטי</a>
+				<ul style='margin-right:40px;'>
+					<li>כל תוספת לAPI גוררת הגדלת גרסא <em>מינורית</em>.</li>
+					<li>שינויים בAPI של V8 שניתנים לטיפול עם<a href="https://github.com/rvagg/nan"><code>nan</code></a> גוררים הגדלת גרסא <em>מינורית</em>, כאלה שלא גוררים העלאת גרסא <em>מג׳ורית</em></li>
+				</ul>
+			</li>
+		</ul>
+			<p class="note">מ<a href="https://github.com/iojs/io.js/pull/886">מדיניות היציבות</a>. בואו ועזרו לנו!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>סוגי גרסאות</h2>
+		<table>
+		<tr>
+			<th scope="row">יציבה</th>
+			<td> כל גרסא עם מספר.<br> <strong>גרסאות יציבות ומוכנות לproduction</strong>.</td>
+		</tr>
+		<tr>
+			<th scope="row">Canary</th>
+			<td>גרסאות יומיות עם עדכונים מV8 ועוד פיצ׳רים.</td>
+		</tr>
+		<tr>
+			<th scope="row">NG</th>
+			<td>גרסא לדור הבא עם ממשק מוכוון ES6/7</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<p class="note">מ<a href="https://github.com/iojs/roadmap/issues/14">מפת הדרכים</a>. בואו ועזרו לנו!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>NG - הדור הבא</h2>
+
+		<ul>
+			<li>פלטפורמה חדשה לאפליקציות JavaScript מודרניות.</li>
+			<li>גרסא עם תאימות תמידית לאחורה.</li>
+			<li>ממשקים יהיו בES6/7 מבלי לשבור מודולים או ממשקים ישנים</li>
+			<li>מפריד את העבודה על הדור הבא מהדור הנוכחי.</li>
+		</ul>
+		<br>
+		<p class="note">דיונים על גרסת הדור הבא מתקיימים ב<a href="https://github.com/iojs/roadmap/issues/14">NG repo</a>.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>דיבוג וניתור הקוד</h2>
+		
+			<p>ממשקי הליבה צריכים לאפשר מערכת חבילות מגוונת וחזקה של כלים לדיבוג וניטור קוד במקום לאמץ אבסטרקציות גבוהות כמו<code>domains</code>.</p>
+		<ul>
+			<li>אינטגרציה עם<code>trace_event</code> (ממשק trace חדש לV8 וChrome).</li>
+			<li>תיעוד וקידום מערכת מבוססת userland לדיבוג וניטור.</li>
+			<li>איחוד נקודות הניטור (DTrace, LTTng, etc)</li>
+		</ul>
+		<p class="note">עבודה מנוהלת על ידי ה<a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. בואו ועזרו לנו!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Streams</h2>
+		<ul>
+			<li><strong>Streams Working Group</strong> לקחו אחריות על פיתוח<code>readable-stream</code>, שהוא עכשיו מודל ה<code>stream</code> הרשמי של io.js</li>
+			<li>תיקון בעיות תאימות.</li>
+      <li>יצירת ממשק פשוט וברור יותר שיגרום לפחות טעויות משתמש.</li>
+			<li>לשקול ממשק עם <a href="https://github.com/whatwg/streams">WHATWG Streams</a> וזיהוי של בעיות אפשריות.</li>
+			<li>שיפור מהירות .</li>
+		</ul>
+		<p class="note">עבודה מנוהלת על ידי <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. בואו ועזרו לנו!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>תמיכה לטווח ארוך</h2>
+
+		<ul>
+			<li>גרסאות חדשות ישוחררו עם תלויות נתמכות ומתוחזקות.</li>
+			<li>תיקונים יעברו לגרסאות אחורה כל עוד אנשים יתרמו אותם.</li>
+			<li>io.js יקח אחריות על תלויות כמו V8 כאשר מפתחיהם יפסיקו לתמוך בגרסאות שהיו חלק מגרסאות io.js קודמות.</li>
+		</ul>
+		<br>
+		<p class="note">סיכום מ <a href="https://github.com/iojs/io.js/issues/725">Stability Policy</a> טיוטא. בואו ועזרו לנו!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>ריבוי שפות</h2>
+
+		<ul>
+			<li>להקל על הנתח של כלילת <code>icu</code> (גודל וכמות זכרון).</li>
+			<li>עידוד תרגומים וקהילה מקומית תוססת.</li>
+				<ul>
+					<li>קהילות תרגומים אוטונומיות (29 שפות עד כו)</li>
+					<li>עידוד גידול במספר המעורבים (160+ עד כה)</li>
+					<li>שיפור הכלים לתרגום האתר, התיעוד וכו.</li>
+				</ul>
+		</ul>
+		<p class="note"><a href="https://github.com/iojs/iojs-he"> בואו תעזרו לנו</a> :)</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>הצטרף אלינו!</h2>
+
+		<table>
+		<tr>
+			<th></th>
+			<th scope="column">ליבה</th>
+			<th scope="column">מערכת אקולוגית</th>
+			<th scope="column">קהילה</th>
+		</tr>
+		<tr>
+			<th>קוד</th>
+			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
+			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
+		</tr>
+		<tr>
+			<th>קידום</th>
+			<td><a href="https://github.com/iojs/roadmap">Roadmap</a></td>
+			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
+			<td><a href="https://github.com/iojs/evangelism">iojs Evangelism WG</a></td>
+		</tr>
+		<tr>
+			<th>i18n</th>
+			<td>ICU</td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">גלים לתיעוד</a></td>
+			<td><a href="https://github.com/iojs/website/issues/125">הצטרפ\י לקהילה שלנו</a></td>
+		</tr>
+		</table>
+
+	</div></section>
+
+	<p class="he-badge"><a href="https://github.com/iojs/roadmap">צור פיצול בGitHub</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

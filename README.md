@@ -18,3 +18,4 @@ Contributors Welcome
 
 * Mikeal Rogers (@mikeal)
 * Bert Belder (@piscisaureus)
+* Chris Dickinson (@chrisdickinson)

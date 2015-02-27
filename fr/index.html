@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 <head>
-	<title>io.js  Feuille de route</title>
+	<title>io.js Feuille de route</title>
 	<meta charset="utf-8">
 	<base href="../" />
 	<meta name="viewport" content="width=792, user-scalable=no">
@@ -10,7 +10,7 @@
 </head>
 <body class="list">
 	<header class="caption">
-		<h1>io.js  Feuille de route</h1>
+		<h1>io.js Feuille de route</h1>
 		<p>Document en évolution: Dernière modification le 26 Février 2015.</p>
 	</header>
 	<section class="slide cover" id="Cover"><div>
@@ -45,7 +45,7 @@
 		<h2>Pour la communauté, par la communauté</h2>
 		<p><strong>io.js</strong> est une version alternative de node.js et compatible avec la quasi-totalité des modules dans <strong>npm</strong>.
 		</p>
-		<p><strong>io.js</strong> est un projet open source dirigé par la communauté. Il a été lancé par les principaux contributeurs de node.js mais dans les quelques premiers mois a attiré plus de développeurs actifs que le projet node.js n’en a jamais eu dans toute son histoire.</p>
+		<p><strong>io.js</strong> est un projet open source dirigé par la communauté. Il a été lancé par les principaux contributeurs de node.js mais dans les quelques premiers moisa attiré plus de développeurs actifs que ce que le projet node.js n'a fait dans toute son histoire.</p>
 
 	</div></section>
 
@@ -54,24 +54,24 @@
 		<ol>
 			<li>Stabilité</li>
 			<li>Transparence (débogage et traçage)</li>
-			<li>Meuilleur flux</li>
+			<li>Meilleurs flux (streams)</li>
 			<li>Support à long terme</li>
-			<li>Adopter des normes en cours</li>
+			<li>Adopter les normes en cours</li>
 			<li>Localisation</li>
 		</ol>
-		<p class="note">Liste de préoccupations consolidée à partir du projet  <a href="https://github.com/iojs/roadmap"> feuille de route</a>. Les contributeurs sont les bienvenus!</p>
+		<p class="note">Liste de préoccupations composée à partir du projet  <a href="https://github.com/iojs/roadmap"> feuille de route</a>. Les contributeurs sont les bienvenus!</p>
 	</div></section>
 
 	<section class="slide"><div style="padding-top:50px;">
 		<h2>Politique de stabilité</h2>
 		<blockquote>
-			<p>Nous avons le plus grand écosystème de paquet de n'importe quelle langage, nous ne pouvons pas le casser.</p>
+			<p>Nous avons le plus grand écosystème de paquet de tous langages confondus, nous ne pouvons pas nous permettre de le briser.</p>
 		</blockquote>
 		<ul>
 			<li>Nous ne supprimons pas les API JS.</li>
-			<li><a href="http://semver.org">Versionage sémantique</a>
+			<li><a href="http://semver.org">Versionnage sémantique</a>
 				<ul>
-					<li>Tout ajout sur l'API signifie une incrémentation <em>mineure</em> de version.</li>
+					<li>Tout ajoût sur l'API signifie une incrémentation <em>mineure</em> de version.</li>
 					<li>Les changements dans l'API C ++ de V8 qui peuvent être gérés par  <a href="https://github.com/rvagg/nan"><code>nan</code></a> entraînent une incrémentation <em>mineure</em> de version, et ceux qui ne le peuvent pas entraînent une incrémentation <em>majeur</em>.</li>
 				</ul>
 			</li>
@@ -101,13 +101,13 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>NG (Génération moderne)</h2>
+		<h2>NG (Nouvelle Génération)</h2>
 
 		<ul>
-			<li>Une nouvelle plate-forme pour les applications modernes JavaScript.</li>
-			<li>Restera compatible en amont.</li>
-            <li>Les nouvelles API peuvent être centrée sur ES6/7 sans casser les anciens modules et API.</li>li>
-			<li>Sépare les API à venir avenir des améliorations à la plateforme actuelle.</li>
+			<li>Une nouvelle plate-forme pour les applications JavaScript modernes.</li>
+			<li>Rétrocompatible.</li>
+            <li>Les nouvelles API peuvent être centrées sur ES6/7 sans casser les anciens modules et API.</li>li>
+			<li>Sépare le travail sur les futures API des améliorations de la plateforme actuelle.</li>
 		</ul>
 		<br>
 		<p class="note">Les discussions NG sont en cours sur le <a href="https://github.com/iojs/ng">dépôt NG</a>.</p>
@@ -119,7 +119,7 @@
 			<p>Le noyau devrait permettre un écosystème massif et diversifié d’outils de débogage et de traçage plutôt qu’entériner des abstractions de haut niveau comme les <code>domaines</code>.</p>
 		</blockquote>
 		<ul>
-			<li>Intégrer avec <code>trace_event</ code> (Nouvelle API de traçage pour V8 et Chrome).</li>
+			<li>S'intégrer avec <code>trace_event</ code> (Nouvelle API de traçage pour V8 et Chrome).</li>
 			<li>Documenter et évangéliser un écosystème de débogage.</li>
 			<li>Unifier les points d’accès au système de traçage (DTrace, LTTng, etc.) </li>
 		</ul>
@@ -129,21 +129,21 @@
 	<section class="slide"><div>
 		<h2>Flux</h2>
 		<ul>
-			<li><strong>Le groupe de travail sur les flux</strong> a repris la main pour <code>readable-stream</code>, qui est maintenant le io.js module de <code>flux</code> officielles.</li>
+			<li><strong>Le groupe de travail des flux</strong> a repris la main pour <code>readable-stream</code>, qui est maintenant le io.js module de <code>flux</code> officielles.</li>
 			<li>Corriger tous les problèmes de compatibilité existants.</li>
             <li>Simplifier la création de flux pour éviter les erreurs de l'utilisateur.</li>
 			<li>Explorer  les interfaces <a href="https://github.com/whatwg/streams">WHATWG Streams</a> pour identifier les problèmes de compatibilité.</li>
 			<li>Améliorer les performances de flux.</li>
 		</ul>
-		<p class="note">Ce travail est piloté par le <a href="https://github.com/iojs/readable-stream">équipe de travail des flux</a>. Les contributeurs sont les bienvenus!</p>
+		<p class="note">Ce travail est piloté par le <a href="https://github.com/iojs/readable-stream">groupe de travail des flux</a>. Les contributeurs sont les bienvenus!</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Support à long terme</h2>
 
 		<ul>
-			<li>De nouvelles lignes de release seront livrés avec dépendances stables et maintenus.</li>
-			<li>Releases de correctifs pour les anciennes versions seront publiées aussi longtemps que les gens contribuent activement.</li>
+			<li>De nouvelles lignes de release seront livrées avec des dépendances stables et maintenues.</li>
+			<li>s releases de correctifs pour les anciennes versions seront publiées aussi longtemps que les gens contribuent activement.</li>
 			<li>io.js aura la responsabilité de vieilles versions de dépendances comme V8 qui apparaissent dans les versions précédentes lorsque leurs responsables cesser de les maintenir.</li>
 		</ul>
 		<br>
@@ -190,7 +190,7 @@
 		<tr>
 			<th>i18n</th>
 			<td>ICU</td>
-			<td><a href="https://github.com/iojs/io.js/issues/695">Outil de documentation</a></td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">Outils de documentation</a></td>
 			<td><a href="https://github.com/iojs/website/issues/125">Rejoindre votre <br>communauté</a> de langue</td>
 		</tr>
 		</table>

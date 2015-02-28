@@ -14,14 +14,20 @@
 		<p>Document en évolution: Dernière modification le 26 Février 2015.</p>
 	</header>
 	<section class="slide cover" id="Cover"><div>
-		<h2>Le futur radieux de io.js</h2>
-		<p>Une feuille de route dirigée par la communauté</p>
+		<h2>L’avenir radieux de io.js</h2>
+		<p>Une feuille de route pilotée par la communauté</p>
 		<img src="pictures/cover.jpg" alt="">
 		<!--
 			To apply styles to the certain slides
 			set slide ID to get needed elements
 			-->
 		<style>
+			body {
+				line-height: 1.5;
+			}
+			.slide p { margin-bottom: 40px; }
+			.slide table th { padding-right: 0.5em; }
+			p.note { font-size: 70%; }
 			#Cover h2 {
 				margin:30px 0 0;
 				color:#FFF;
@@ -38,6 +44,13 @@
 				#Cover p a {
 					color:#FFF;
 					}
+				*[lang] {
+					font-style: italic;
+					font-weight: normal;
+				}
+				em *[lang] {
+					font-style: normal;
+				}
 		</style>
 	</div></section>
 
@@ -45,38 +58,38 @@
 		<h2>Pour la communauté, par la communauté</h2>
 		<p><strong>io.js</strong> est une version alternative de node.js et compatible avec la quasi-totalité des modules dans <strong>npm</strong>.
 		</p>
-		<p><strong>io.js</strong> est un projet open source dirigé par la communauté. Il a été lancé par les principaux contributeurs de node.js mais dans les quelques premiers moisa attiré plus de développeurs actifs que ce que le projet node.js n'a fait dans toute son histoire.</p>
+		<p><strong>io.js</strong> est un projet open-source dirigé par la communauté. Il a été lancé par les principaux contributeurs de node.js mais dans les quelques premiers mois a attiré plus de développeurs actifs que le projet node.js dans toute son histoire.</p>
 
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Qu'attendent les gens de io.js?</h2>
+		<h2>Qu'attendent les gens de io.js ?</h2>
 		<ol>
 			<li>Stabilité</li>
 			<li>Transparence (débogage et traçage)</li>
-			<li>Meilleurs flux (streams)</li>
+			<li>Meilleurs flux (<span lang="en">streams</span>)</li>
 			<li>Support à long terme</li>
 			<li>Adopter les normes en cours</li>
 			<li>Localisation</li>
 		</ol>
-		<p class="note">Liste de préoccupations composée à partir du projet  <a href="https://github.com/iojs/roadmap"> feuille de route</a>. Les contributeurs sont les bienvenus!</p>
+		<p class="note">Liste de préoccupations composée à partir du projet  <a href="https://github.com/iojs/roadmap">feuille de route</a>. Les contributeurs sont les bienvenus !</p>
 	</div></section>
 
 	<section class="slide"><div style="padding-top:50px;">
 		<h2>Politique de stabilité</h2>
 		<blockquote>
-			<p>Nous avons le plus grand écosystème de paquet de tous langages confondus, nous ne pouvons pas nous permettre de le briser.</p>
+			<p>Nous avons le plus grand écosystème de paquets tous langages confondus, nous ne pouvons pas nous permettre de le briser.</p>
 		</blockquote>
 		<ul>
 			<li>Nous ne supprimons pas les API JS.</li>
 			<li><a href="http://semver.org">Versionnage sémantique</a>
 				<ul>
-					<li>Tout ajoût sur l'API signifie une incrémentation <em>mineure</em> de version.</li>
-					<li>Les changements dans l'API C ++ de V8 qui peuvent être gérés par  <a href="https://github.com/rvagg/nan"><code>nan</code></a> entraînent une incrémentation <em>mineure</em> de version, et ceux qui ne le peuvent pas entraînent une incrémentation <em>majeur</em>.</li>
+					<li>Tout ajout sur l’API signifie une incrémentation <em>mineure</em> de version.</li>
+					<li>Les changements dans l’API C ++ de V8 qui peuvent être gérés par  <a href="https://github.com/rvagg/nan"><code>nan</code></a> entraînent une incrémentation <em>mineure</em> de version, et ceux qui ne le peuvent pas entraînent une incrémentation <em>majeure</em>.</li>
 				</ul>
 			</li>
 		</ul>
-			<p class="note">Depuis la section de <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">politique de stabilité</a> de la  feuille de route. Les contributeurs sont les bienvenus!</p>
+			<p class="note">Depuis la section de <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">politique de stabilité</a> de la feuille de route. Les contributeurs sont les bienvenus !</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -88,7 +101,7 @@
 		</tr>
 		<tr>
 			<th scope="row">Canary</th>
-			<td>Nightly builds avec Canary V8 et d'autres nouvelles fonctionnalités.</td>
+			<td>Nightly builds avec Canary V8 et d’autres nouvelles fonctionnalités.</td>
 		</tr>
 		<tr>
 			<th scope="row">NG</th>
@@ -97,7 +110,7 @@
 		</table>
 		<br>
 		<br>
-		<p class="note">Depuis la <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md"> feuille de route</a>. Les contributeurs sont les bienvenus!</p>
+		<p class="note">Depuis la <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md"> feuille de route</a>. Les contributeurs sont les bienvenus !</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -106,7 +119,7 @@
 		<ul>
 			<li>Une nouvelle plate-forme pour les applications JavaScript modernes.</li>
 			<li>Rétrocompatible.</li>
-            <li>Les nouvelles API peuvent être centrées sur ES6/7 sans casser les anciens modules et API.</li>li>
+      <li>Les nouvelles API peuvent être centrées sur ES6/7 sans casser les anciens modules et API.</li>
 			<li>Sépare le travail sur les futures API des améliorations de la plateforme actuelle.</li>
 		</ul>
 		<br>
@@ -116,26 +129,26 @@
 	<section class="slide"><div>
 		<h2>Débogage & Traçage</h2>
 		<blockquote>
-			<p>Le noyau devrait permettre un écosystème massif et diversifié d’outils de débogage et de traçage plutôt qu’entériner des abstractions de haut niveau comme les <code>domaines</code>.</p>
+			<p>Le noyau devrait permettre un écosystème massif et diversifié d’outils de débogage et de traçage plutôt qu’entériner des abstractions de haut niveau comme les <code>domains</code>.</p>
 		</blockquote>
 		<ul>
-			<li>S'intégrer avec <code>trace_event</ code> (Nouvelle API de traçage pour V8 et Chrome).</li>
+			<li>S'intégrer avec <code>trace_event</code> (Nouvelle API de traçage pour V8 et Chrome).</li>
 			<li>Documenter et évangéliser un écosystème de débogage.</li>
 			<li>Unifier les points d’accès au système de traçage (DTrace, LTTng, etc.) </li>
 		</ul>
-		<p class="note">Ce travail est piloté par le <a href="https://github.com/iojs/tracing-wg">groupe de travail sur le Traçage</a>. Les contributeurs sont les bienvenus!</p>
+		<p class="note">Ce travail est piloté par le <a href="https://github.com/iojs/tracing-wg">groupe de travail sur le Traçage</a>. Les contributeurs sont les bienvenus !</p>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Flux</h2>
+		<h2>Flux (<span lang="en">streams</span>)</h2>
 		<ul>
-			<li><strong>Le groupe de travail des flux</strong> a repris la main pour <code>readable-stream</code>, qui est maintenant le io.js module de <code>flux</code> officielles.</li>
+			<li><strong>Le groupe de travail sur les Flux</strong> a repris la main pour <code>readable-stream</code>, qui est maintenant le module <code>stream</code> officiel pour io.js.</li>
 			<li>Corriger tous les problèmes de compatibilité existants.</li>
-            <li>Simplifier la création de flux pour éviter les erreurs de l'utilisateur.</li>
+      <li>Simplifier la création de flux pour éviter les erreurs de l’utilisateur.</li>
 			<li>Explorer  les interfaces <a href="https://github.com/whatwg/streams">WHATWG Streams</a> pour identifier les problèmes de compatibilité.</li>
 			<li>Améliorer les performances de flux.</li>
 		</ul>
-		<p class="note">Ce travail est piloté par le <a href="https://github.com/iojs/readable-stream">groupe de travail des flux</a>. Les contributeurs sont les bienvenus!</p>
+		<p class="note">Ce travail est piloté par le <a href="https://github.com/iojs/readable-stream">groupe de travail sur les Flux</a>. Les contributeurs sont les bienvenus !</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -147,33 +160,33 @@
 			<li>io.js aura la responsabilité des vieilles versions de dépendances comme V8 qui apparaissent dans les versions précédentes lorsque leurs responsables cesser de les maintenir.</li>
 		</ul>
 		<br>
-		<p class="note">Résumé issu de la <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">politique de stabilité</a>. Les contributeurs sont les bienvenus!</p>
+		<p class="note">Résumé issu de la <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">politique de stabilité</a>. Les contributeurs sont les bienvenus !</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Localisation</h2>
 
 		<ul>
-			<li>Réduire l'impact de l'utilisation <code>l'icu</code> (impacts du binaire et de la mémoire).</li>
+			<li>Réduire l’impact de l’utilisation <code>l’icu</code> (taille du binaire et occupation mémoire).</li>
 			<li>Favoriser les communautés de localisation dynamiques.</li>
 				<ul>
-					<li>Les communautés de langue autonome (plus de 30 enregistrées jusqu'à présent).</li>
-					<li>Efforts d'évangélisation pour développer l'adhésion (plus de 160 membres à ce jour).</li>
-					<li>Améliorer l'outil pour traduire le site web, les documentations d'API, les installeurs et les présentations.</li>
+					<li>Des communautés de langue autonomes (plus de 30 enregistrées jusqu’à présent).</li>
+					<li>Efforts d’évangélisation pour développer l’adhésion (plus de 160 membres à ce jour).</li>
+					<li>Améliorer les outils pour traduire le site web, les documentations d’API, les installeurs et les présentations.</li>
 				</ul>
 		</ul>
 		<p class="note">Vous pouvez participer en <a href="https://github.com/iojs/website/issues/125">rejoignant la communauté de votre langue</a> :)</p>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Participez !</h2>
+		<h2>Participez !</h2>
 
 		<table>
 		<tr>
 			<th></th>
 			<th scope="column">Le noyau</th>
-			<th scope="column">L'Ecosystem</th>
-			<th scope="column">La Communauté</th>
+			<th scope="column">L’écosystème</th>
+			<th scope="column">La communauté</th>
 		</tr>
 		<tr>
 			<th>Code</th>
@@ -182,16 +195,16 @@
 			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
 		</tr>
 		<tr>
-			<th>Evangelism</th>
+			<th>Évangélisme</th>
 			<td><a href="https://github.com/iojs/roadmap">Feuille de route</a></td>
 			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
-			<td><a href="https://github.com/iojs/evangelism">Évangélisme d'iojs WG</a></td>
+			<td><a href="https://github.com/iojs/evangelism">Groupe de travail Évangélisme d’io.js</a></td>
 		</tr>
 		<tr>
 			<th>i18n</th>
 			<td>ICU</td>
 			<td><a href="https://github.com/iojs/io.js/issues/695">Outils de documentation</a></td>
-			<td><a href="https://github.com/iojs/website/issues/125">Rejoindre votre <br>communauté</a> de langue</td>
+			<td><a href="https://github.com/iojs/website/issues/125">Rejoindre votre communauté</a> de langue</td>
 		</tr>
 		</table>
 

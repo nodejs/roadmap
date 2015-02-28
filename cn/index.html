@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>io.js Roadmap</title>
+	<title>io.js 路线图</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,12 +17,12 @@
 	}
 	</style>
 	<header class="caption">
-		<h1>io.js Roadmap</h1>
-		<p>Living Document: Last edited on February 26th, 2015.</p>
+		<h1>io.js 路线图</h1>
+		<p>维护中的文档: 最后编译于 February 26th, 2015.</p>
 	</header>
 	<section class="slide cover" id="Cover"><div>
-		<h2>The Bright Future of io.js</h2>
-		<p>A Community Driven Roadmap</p>
+		<h2>io.js 光明的未来</h2>
+		<p>由社区驱动的路线图</p>
 		<img src="../pictures/cover.jpg" alt="">
 		<!--
 			To apply styles to the certain slides
@@ -49,41 +49,41 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>For the community, by the community</h2>
-		<p><strong>io.js</strong> is a drop-in replacement for node.js and is compatible with nearly all the modules in <strong>npm</strong>.
+		<h2>为了社区，依靠社区</h2>
+		<p><strong>io.js</strong> 是 node.js 的替代品，可互换，并且几乎兼容 <strong>npm</strong> 中的所有模块。
 		</p>
-		<p><strong>io.js</strong> is a community driven open source project. It was started by the primary contributors to node.js but in the first few months attracted more active developers than the node.js project has had in its entire history.</p>
+		<p><strong>io.js</strong> 是一个社区驱动的开源项目，由 node.js 的主要贡献者发起，并且在最初的几个月内吸引了比 node.js 出现以来更多的活跃开发者。</p>
 
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>What do people want from io.js?</h2>
+		<h2>从 io.js 能得到什么?</h2>
 		<ol>
-			<li>Stability</li>
-			<li>Transparency (Debugging and Tracing)</li>
-			<li>Better Streams</li>
-			<li>Long Term Support</li>
-			<li>Embrace Ongoing Standards</li>
-			<li>Localization</li>
+			<li>稳定性</li>
+			<li>透明性 (调试和追踪)</li>
+			<li>更好的 Streams</li>
+			<li>长期支持</li>
+			<li>拥抱标准</li>
+			<li>本地化</li>
 		</ol>
-		<p class="note">Concerns list compiled from the <a href="https://github.com/iojs/roadmap">roadmap</a> project. Contributors welcome!</p>
+		<p class="note">相关列表编辑自 <a href="https://github.com/iojs/roadmap">roadmap</a> 项目，欢迎贡献者!</p>
 	</div></section>
 
 	<section class="slide"><div style="padding-top:50px;">
-		<h2>Stability Policy</h2>
+		<h2>稳定性策略</h2>
 		<blockquote>
-			<p>We have the largest package ecosystem of any language, we can't break it.</p>
+			<p>在各种语言中我们拥有最大的模块生态系统，我们不能打破他。</p>
 		</blockquote>
 		<ul>
-			<li>We do not remove JS API.</li>
-			<li><a href="http://semver.org">Semantic Versioning</a>
+			<li>不会移除 JS API。</li>
+			<li><a href="http://semver.org">语义化版本。</a>
 				<ul>
-					<li>Any API addition means a <em>minor</em> version increment.</li>
-					<li>Changes in V8's C++ API handled by <a href="https://github.com/rvagg/nan"><code>nan</code></a> mean a <em>minor</em> version increment and a <em>major</em> increment if they cannot.</li>
+					<li>添加 API 会发布 <em>minor</em> 版本。</li>
+					<li>如果 V8 的 C++ API 的变化能由 <a href="https://github.com/rvagg/nan"><code>nan</code></a> 处理，则发布 <em>minor</em> 版本，否则发布 <em>major</em> 版本。</li>
 				</ul>
 			</li>
 		</ul>
-			<p class="note">From the <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a> section of the Roadmap. Contributors welcome!</p>
+			<p class="note">来自路线图的 <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">稳定性策略</a> 章节，欢迎贡献者!</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -91,85 +91,85 @@
 		<table>
 		<tr>
 			<th scope="row">Release</th>
-			<td>Any versioned build.<br> <strong>Must be stable and ready for production</strong>.</td>
+			<td>任何被标记的版本都会编译<br> <strong>必须稳定且可用于生产环境。</td>
 		</tr>
 		<tr>
 			<th scope="row">Canary</th>
-			<td>Nightly builds with Canary V8 & other new features.</td>
+			<td>每晚编译，包含 Canary V8 及其他新特性。</td>
 		</tr>
 		<tr>
 			<th scope="row">NG</th>
-			<td>Next Generation ES6/7 centric API.</td>
+			<td>可使用下一代 ES6/7 核心 API。</td>
 		</tr>
 		</table>
 		<br>
 		<br>
-		<p class="note">From the <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Roadmap</a>. Contributors welcome!</p>
+		<p class="note">来自 <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">路线图</a>，欢迎贡献者!</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>NG (Next Generation)</h2>
 
 		<ul>
-			<li>A new platform for modern JavaScript Applications.</li>
-			<li>Will remain backward compatible indefinitely.</li>
-			<li>New APIs can be ES6/7 centric without breaking old modules and API.</li>
-			<li>Separates work on future API from improvements to the current platform.</li>
+			<li>现代 JavaScript 应用的一个新平台。</li>
+			<li>将会一直保持向下兼容。</li>
+			<li>新的 API 将会以 ES6/7 为中心，但会兼容原来的模块和 API。</li>
+			<li>将对现在平台的改善和对未来 API 的工作区分开。</li>
 		</ul>
 		<br>
-		<p class="note">NG discussions are ongoing in the <a href="https://github.com/iojs/ng">NG repo</a>.</p>
+		<p class="note">NG 讨论还在持续进行中 <a href="https://github.com/iojs/ng">NG 仓库</a></p>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Debugging & Tracing</h2>
+		<h2>调试和追踪</h2>
 		<blockquote>
-			<p>Core should enable a massive and diverse ecosystem of debugging and tracing tools rather than endorse high level abstractions like <code>domains</code>.</p>
+			<p>应该在核心使用大量各种各样的调试和追踪工具，而不是提供高层级的抽象，如 <code>domains</code>。</p>
 		</blockquote>
 		<ul>
-			<li>Integrate with <code>trace_event</code> (New trace API for V8 & Chrome).</li>
-			<li>Document and evangelize a debugging ecosystem.</li>
-			<li>Unify system tracing endpoint (DTrace, LTTng, etc)</li>
+			<li>集成 <code>trace_event</code> (V8 和 Chrome 的新 trace API)。</li>
+			<li>添加文档和布道这种调试生态系统。</li>
+			<li>统一系统追踪终端 (DTrace，LTTng 等)。</li>
 		</ul>
-		<p class="note">Work being lead by the <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Contributors welcome!</p>
+		<p class="note">由<a href="https://github.com/iojs/tracing-wg">追踪工作组</a>领导，欢迎贡献者!</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Streams</h2>
 		<ul>
-			<li><strong>Streams Working Group</strong> has taken over <code>readable-stream</code>, which is now the official io.js <code>stream</code> module.</li>
-			<li>Fix all existing compatibility issues.</li>
-      <li>Simplify stream creation to avoid user error.</li>
-			<li>Explore <a href="https://github.com/whatwg/streams">WHATWG Streams</a> interface and identify compatibility issues.</li>
-			<li>Improve stream performance.</li>
+			<li><strong>Streams 工作组</strong> 已经接管了 <code>readable-stream</code>，它已经成为了 io.js 官方 <code>stream</code> 模块。</li>
+			<li>解决所有现存的兼容问题。</li>
+			<li>简化生成 stream，避免造成用户使用错误。</li>
+			<li>探索 <a href="https://github.com/whatwg/streams">WHATWG Streams</a> 接口，识别兼容性问题。</li>
+			<li>提升 stream 性能。</li>
 		</ul>
-		<p class="note">Work being lead by the <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Contributors welcome!</p>
+		<p class="note">由 <a href="https://github.com/iojs/readable-stream">Streams 工作组</a>领导，欢迎贡献者!</p>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Long Term Support</h2>
+		<h2>长期支持</h2>
 
 		<ul>
-			<li>New release lines will ship with stable and supported dependencies.</li>
-			<li>Patch releases of older versions will be published for as long as people are actively contributing.</li>
-			<li>io.js will take responsibility for old versions of dependencies like V8 that appear in prior releases when their maintainers stop supporting them.</li>
+			<li>新的发布线将会和稳定及所支持的依赖一起发布。</li>
+			<li>只要有人一直积极的贡献，老版本依然会发布 patch 版本。</li>
+			<li>一旦依赖库（如 v8）的维护者不再维护老版本的 io.js 中曾经引用过的版本，io.js 将会对此负责，继续维护。</li>
 		</ul>
 		<br>
-		<p class="note">Summary from <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a>. Contributors welcome!</p>
+		<p class="note">从<a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">稳定性策略</a>总结，欢迎贡献!</p>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Localization</h2>
+		<h2>本地化</h2>
 
 		<ul>
-			<li>Reduce impact of including <code>icu</code> (binary and memory footprint).</li>
-			<li>Foster a vibrant localization community.</li>
+			<li>减少引入 <code>icu</code> 的影响 (二进制和内存占用空间)。</li>
+			<li>推进充满活力的本地化社区的发展</li>
 				<ul>
-					<li>Autonomous language communities (30+ registered so far)</li>
-					<li>Evangelism efforts to grow membership (160+ members so far)</li>
-					<li>Improve tooling for translating website, API docs, installers and slide decks.</li>
+					<li>自主性的语言社区 (到现在已经有 30+)。</li>
+					<li>布道以增加成员人数 (到现在已经有 160+ 人)。</li>
+					<li>优化工具，支持翻译站点，API 文档，安装器，PPT。</li>
 				</ul>
 		</ul>
-		<p class="note">You can get involved by <a href="https://github.com/iojs/website/issues/125">joining the community for your language</a> :)</p>
+		<p class="note">如果你想加入本地化社区请到 <a href="https://github.com/iojs/website/issues/125">这里留言</a> :)</p>
 	</div></section>
 
 	<section class="slide"><div>

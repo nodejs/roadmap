@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>io.js 로드맵</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<style>
+	h2 {
+		font-size:120%;
+	}
+	li {
+		margin-left:30px;
+	}
+	</style>
+	<header class="caption">
+		<h1>io.js 로드맵</h1>
+		<p>리빙 도큐먼트: 최종수정일 2015년 2월 26일</p>
+		<h2>Translations</h2>
+		<ul>
+			<li><a href="http://roadmap.iojs.org/">English</a></li>
+			<li><a href="http://roadmap.iojs.jp/">日本語</a></li>
+			<li><a href="http://roadmap.iojs.org/he/">עברית</a></li>
+			<li><a href="http://roadmap.iojs.org/fr/">Français</a></li>
+			<li><a href="http://roadmap.iojs.org/ko/">한국어</a></li>
+		</ul>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>io.js의 밝은 미래</h2>
+		<p>커뮤니티 주도 로드맵</p>
+		<img src="pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>커뮤니티를 위한, 커뮤니티에 의한</h2>
+		<p><strong>io.js</strong>는 Node.js의 대체하며 <strong>npm</strong>에 있는 npm의 거의 모든 모듈과 호환된다.
+		</p>
+		<p><strong>io.js</strong>는 커뮤니티 주도의 오픈소스 프로젝트이다. io.js는 node.js의 주요 기여자로 시작했지만, 불과 몇 개월 만에 node.js 역사상 가장 많은 수의 활발한 개발자를 모집했다.</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>io.js에 바라는 것은?</h2>
+		<ol>
+			<li>안정성</li>
+			<li>투명성 (디버그, 트레이싱)</li>
+			<li>더 좋은 스트림</li>
+			<li>장기적인 지원</li>
+			<li>지속적인 표준 수용</li>
+			<li>지역화</li>
+		</ol>
+		<p class="note"><a href="https://github.com/iojs/roadmap">로드맵</a> 프로젝트에서 관심 리스트를 가져왔다. 기여는 환영한다!</p>
+	</div></section>
+
+	<section class="slide"><div style="padding-top:50px;">
+		<h2>안정성 방침</h2>
+		<blockquote>
+			<p>우리는 어떤 언어보다 큰 패키지 생태계를 가지고 있으므로 이를 망쳐서는 안된다.</p>
+		</blockquote>
+		<ul>
+			<li>JS API를 제거하지 않는다.</li>
+			<li><a href="http://semver.org/lang/ko/">유의적 버전</a>
+				<ul>
+					<li>API를 추가할 때는 <em>부</em> 버전을 올린다.</li>
+					<li>V8의 C++ API 변경은 <a href="https://github.com/rvagg/nan"><code>nan</code></a>에서 관리한다. <code>nan</code>이 처리가능한 경우 <em>부</em> 버전을, 그러지 못할 경우 <em>주</em> 버전을 올린다.</li>
+				</ul>
+			</li>
+		</ul>
+			<p class="note">로드맵의 <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">안정성 방침</a> 항목에서 가져왔다. 기여는 환영한다!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>채널</h2>
+		<table>
+		<tr>
+			<th scope="row">Release</th>
+			<td>버전이 붙은 모든 빌드.<br> <strong>반드시 안정적이고 프로덕션에서 사용가능해야 한다</strong>.</td>
+		</tr>
+		<tr>
+			<th scope="row">Canary</th>
+			<td>Canary V8,다른 새로운 기능을 사용하는 나이틀리 빌드.</td>
+		</tr>
+		<tr>
+			<th scope="row">NG</th>
+			<td>차세대(Next Generation) ES6/7 중심적 API.</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">로드맵</a>에서 가져옴. 기여는 환영한다!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>NG (Next Generation)</h2>
+
+		<ul>
+			<li>현대 JavaScript 애플리케이션을 위한 새로운 플랫폼.</li>
+			<li>계속 하위호환성을 유지할 예정이다.</li>
+			<li>새 API는 오래된 모듈과 API를 깨지 않으면서 ES6/7 중심적이 될 수 있다.</li>
+			<li>이후의 API는 현재 플랫폼의 개선과 독립적으로 진행한다.</li>
+		</ul>
+		<br>
+		<p class="note">NG에 관한 토론은 <a href="https://github.com/iojs/ng">NG 저장소</a>에서 진행중이다.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>디버그, 트레이싱</h2>
+		<blockquote>
+			<p>코어는 <code>domains</code> 같은 고 수준 추상화를 목표로 하기보다는 디버그, 트레이스의 생태를 활성화 해야한다.</p>
+		</blockquote>
+		<ul>
+			<li><code>trace_event</code>와의 통합 (V8, Chrome을 위한 새로운 트레이스 API).</li>
+			<li>디버그 생태를 위한 문서와 교육.</li>
+			<li>시스템 트레이싱 엔드포인트 통합 (DTrace, LTTng 등)</li>
+		</ul>
+		<p class="note">작업은 <a href="https://github.com/iojs/tracing-wg">트레이싱 워킹 그룹</a>에 의해 주도된다. 기여는 환영한다!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>스트림</h2>
+		<ul>
+			<li><strong>스트림 워킹 그룹</strong>은 <code>readable-stream</code>을 인계해, io.js 공식 <code>stream</code> 모듈로 만들었다.</li>
+			<li>모든 기존 호환성 이슈 수정.</li>
+      <li>사용자 에러를 피하기 위해 스트림의 구현 단순화.</li>
+			<li><a href="https://github.com/whatwg/streams">WHATWG Streams</a> 인터페이스와 호환성 이슈를 명확히 한다.</li>
+			<li>스트림의 성능향상.</li>
+		</ul>
+		<p class="note">작업은 <a href="https://github.com/iojs/readable-stream">스트림 워킹 그룹</a>에 의해 주도된다. 기여는 환영한다!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>장기적인 지원</h2>
+
+		<ul>
+			<li>새로운 릴리스 라인은 안정성과 의존성 지원과 같이 배포된다.</li>
+			<li>오래된 버전의 패치 릴리스는 사람들이 적극적으로 기여하는 한 배포된다.</li>
+			<li>io.js는 V8 이전 릴리스 관리자가 지원을 중단할 때 같은 오래된 버전의 의존성을 책임진다.</li>
+		</ul>
+		<br>
+		<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">안정성 방침</a>의 요약이다. 기여는 환영한다!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>지역화</h2>
+
+		<ul>
+			<li><code>icu</code> 사용할 때의 영향 감소 (바이너리, 메모리 풋프린트).</li>
+			<li>활발한 지역화 커뮤니티의 육성.</li>
+				<ul>
+					<li>자율적인 언어 커뮤니티 (30+ 커뮤니티)</li>
+					<li>에반젤리즘에 의한 멤버 증가 (160+ 맴버)</li>
+					<li>웹사이트, API 문서, 인스톨러, 슬라이드 덱을 위한 도구 개발.</li>
+				</ul>
+		</ul>
+    <p class="note"><a href="https://github.com/iojs/website/issues/125">당신 언어의 커뮤니티</a>에 참여할 수 있다. :)</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>참여하기!</h2>
+
+		<table>
+		<tr>
+			<th></th>
+			<th scope="column">코어</th>
+			<th scope="column">생태</th>
+			<th scope="column">커뮤니티</th>
+		</tr>
+		<tr>
+			<th>코드</th>
+			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
+			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
+		</tr>
+		<tr>
+			<th>에반젤리즘</th>
+			<td><a href="https://github.com/iojs/roadmap">로드맵</a></td>
+			<td><a href="http://nodeschool.io/">노드스쿨</a></td>
+			<td><a href="https://github.com/iojs/evangelism">iojs 에반젤리즘 워킹 그룹</a></td>
+		</tr>
+		<tr>
+			<th>지역화</th>
+			<td>ICU</td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">문서 도구</a></td>
+			<td><a href="https://github.com/iojs/website/issues/125">언어 커뮤니티에<br> 참여하기</a></td>
+		</tr>
+		</table>
+
+	</div></section>
+
+	<p class="badge"><a href="https://github.com/iojs/roadmap">Github에서 포크하기</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

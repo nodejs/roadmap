@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>io.js 路线图</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<style>
+	h2 {
+		font-size:120%;
+	}
+	li {
+		margin-left:30px;
+	}
+	</style>
+	<header class="caption">
+		<h1>io.js 路线图</h1>
+		<p>维护中的文档: 最后编译于 February 26th, 2015.</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>io.js 光明的未来</h2>
+		<p>由社区驱动的路线图</p>
+		<img src="../pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>为了社区，依靠社区</h2>
+		<p><strong>io.js</strong> 是 node.js 的替代品，可互换，并且几乎兼容 <strong>npm</strong> 中的所有模块。
+		</p>
+		<p><strong>io.js</strong> 是一个社区驱动的开源项目，由 node.js 的主要贡献者发起，并且在最初的几个月内吸引了比 node.js 出现以来更多的活跃开发者。</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>从 io.js 能得到什么?</h2>
+		<ol>
+			<li>稳定性</li>
+			<li>透明性 (调试和追踪)</li>
+			<li>更好的 Streams</li>
+			<li>长期支持</li>
+			<li>拥抱标准</li>
+			<li>本地化</li>
+		</ol>
+		<p class="note">相关列表编辑自 <a href="https://github.com/iojs/roadmap">roadmap</a> 项目，欢迎贡献者!</p>
+	</div></section>
+
+	<section class="slide"><div style="padding-top:50px;">
+		<h2>稳定性策略</h2>
+		<blockquote>
+			<p>在各种语言中我们拥有最大的模块生态系统，我们不能打破他。</p>
+		</blockquote>
+		<ul>
+			<li>不会移除 JS API。</li>
+			<li><a href="http://semver.org">语义化版本。</a>
+				<ul>
+					<li>添加 API 会发布 <em>minor</em> 版本。</li>
+					<li>如果 V8 的 C++ API 的变化能由 <a href="https://github.com/rvagg/nan"><code>nan</code></a> 处理，则发布 <em>minor</em> 版本，否则发布 <em>major</em> 版本。</li>
+				</ul>
+			</li>
+		</ul>
+			<p class="note">来自路线图的 <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">稳定性策略</a> 章节，欢迎贡献者!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Channels</h2>
+		<table>
+		<tr>
+			<th scope="row">Release</th>
+			<td>任何被标记的版本都会编译<br> <strong>必须稳定且可用于生产环境。</td>
+		</tr>
+		<tr>
+			<th scope="row">Canary</th>
+			<td>每晚编译，包含 Canary V8 及其他新特性。</td>
+		</tr>
+		<tr>
+			<th scope="row">NG</th>
+			<td>可使用下一代 ES6/7 核心 API。</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<p class="note">来自 <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">路线图</a>，欢迎贡献者!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>NG (Next Generation)</h2>
+
+		<ul>
+			<li>现代 JavaScript 应用的一个新平台。</li>
+			<li>将会一直保持向下兼容。</li>
+			<li>新的 API 将会以 ES6/7 为中心，但会兼容原来的模块和 API。</li>
+			<li>将对现在平台的改善和对未来 API 的工作区分开。</li>
+		</ul>
+		<br>
+		<p class="note">NG 讨论还在持续进行中 <a href="https://github.com/iojs/ng">NG 仓库</a></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>调试和追踪</h2>
+		<blockquote>
+			<p>应该在核心使用大量各种各样的调试和追踪工具，而不是提供高层级的抽象，如 <code>domains</code>。</p>
+		</blockquote>
+		<ul>
+			<li>集成 <code>trace_event</code> (V8 和 Chrome 的新 trace API)。</li>
+			<li>添加文档和布道这种调试生态系统。</li>
+			<li>统一系统追踪终端 (DTrace，LTTng 等)。</li>
+		</ul>
+		<p class="note">由<a href="https://github.com/iojs/tracing-wg">追踪工作组</a>领导，欢迎贡献者!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Streams</h2>
+		<ul>
+			<li><strong>Streams 工作组</strong> 已经接管了 <code>readable-stream</code>，它已经成为了 io.js 官方 <code>stream</code> 模块。</li>
+			<li>解决所有现存的兼容问题。</li>
+			<li>简化生成 stream，避免造成用户使用错误。</li>
+			<li>探索 <a href="https://github.com/whatwg/streams">WHATWG Streams</a> 接口，识别兼容性问题。</li>
+			<li>提升 stream 性能。</li>
+		</ul>
+		<p class="note">由 <a href="https://github.com/iojs/readable-stream">Streams 工作组</a>领导，欢迎贡献者!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>长期支持</h2>
+
+		<ul>
+			<li>新的发布线将会和稳定及所支持的依赖一起发布。</li>
+			<li>只要有人一直积极的贡献，老版本依然会发布 patch 版本。</li>
+			<li>一旦依赖库（如 v8）的维护者不再维护老版本的 io.js 中曾经引用过的版本，io.js 将会对此负责，继续维护。</li>
+		</ul>
+		<br>
+		<p class="note">从<a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">稳定性策略</a>总结，欢迎贡献!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>本地化</h2>
+
+		<ul>
+			<li>减少引入 <code>icu</code> 的影响 (二进制和内存占用空间)。</li>
+			<li>推进充满活力的本地化社区的发展</li>
+				<ul>
+					<li>自主性的语言社区 (到现在已经有 30+)。</li>
+					<li>布道以增加成员人数 (到现在已经有 160+ 人)。</li>
+					<li>优化工具，支持翻译站点，API 文档，安装器，PPT。</li>
+				</ul>
+		</ul>
+		<p class="note">如果你想加入本地化社区请到 <a href="https://github.com/iojs/website/issues/125">这里留言</a> :)</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Get Involved!</h2>
+
+		<table>
+		<tr>
+			<th></th>
+			<th scope="column">Core</th>
+			<th scope="column">Ecosystem</th>
+			<th scope="column">Community</th>
+		</tr>
+		<tr>
+			<th>Code</th>
+			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
+			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
+		</tr>
+		<tr>
+			<th>Evangelism</th>
+			<td><a href="https://github.com/iojs/roadmap">Roadmap</a></td>
+			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
+			<td><a href="https://github.com/iojs/evangelism">iojs Evangelism WG</a></td>
+		</tr>
+		<tr>
+			<th>i18n</th>
+			<td>ICU</td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">doc tooling</a></td>
+			<td><a href="https://github.com/iojs/website/issues/125">join a language<br>community</a></td>
+		</tr>
+		</table>
+
+	</div></section>
+
+	<p class="badge"><a href="https://github.com/iojs/roadmap">Fork me on Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

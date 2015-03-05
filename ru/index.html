@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>io.js Roadmap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<style>
+	h2 {
+		font-size:120%;
+	}
+	li {
+		margin-left:30px;
+	}
+	</style>
+	<header class="caption">
+		<h1>План развития io.js</h1>
+		<p>Живой документ: Последний раз редактирован 26 февраля 2015 года.</p>
+		<h2>Переводы</h2>
+		<ul>
+			<li><a href="http://roadmap.iojs.org/">English</a></li>
+			<li><a href="http://roadmap.iojs.org/cn/">简体中文</a></li>
+			<li><a href="http://roadmap.iojs.jp/">日本語</a></li>
+			<li><a href="http://roadmap.iojs.org/he/">עברית</a></li>
+			<li><a href="http://roadmap.iojs.org/fr/">Français</a></li>
+			<li><a href="http://roadmap.iojs.org/ko/">한국어</a></li>
+		</ul>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Светлое будущее io.js</h2>
+		<p>Управляемый сообществом план развития</p>
+		<img src="../pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			.slide {
+				line-height: 1.3;
+			}
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+			}
+			#Cover p a {
+				color:#FFF;
+			}
+			#Localization ul {
+				margin-bottom: 10px;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>От сообщества для сообщества</h2>
+		<p><strong>io.js</strong> это неожиданная замена для node.js, совместимая почти со всеми модулями <strong>npm</strong>.
+		</p>
+		<p><strong>io.js</strong> это управляемый сообществом проект с открытым исходным кодом. Он был начат основными контрибьютерами node.js и за первые несколько месяцев привлек больше активных разработчиков, чем было у node.js за всю его историю</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Что люди хотят от io.js?</h2>
+		<ol>
+			<li>Стабильность</li>
+			<li>Прозрачность (Отладка и Трассировка)</li>
+			<li>Улучшение реализации Потоков</li>
+			<li>Долгосрочная поддержки</li>
+			<li>Поддержка современных стандартов</li>
+			<li>Локализация</li>
+		</ol>
+		<p class="note">Список проблем получен из проекта <a href="https://github.com/iojs/roadmap">roadmap</a>. Желающие помочь, добро пожаловать!</p>
+	</div></section>
+
+	<section class="slide"><div style="padding-top:50px;">
+		<h2>Политика стабильности</h2>
+		<blockquote>
+			<p>Мы располагаем самой большой экосистемой пакетов, мы не можем сломать её.</p>
+		</blockquote>
+		<ul>
+			<li>Мы не удаляем JS API.</li>
+			<li><a href="http://semver.org">Семантическое управление версиями.</a>
+				<ul>
+					<li>Любое добавление нового API означает увеличение <em>минорной</em> версии.</li>
+					<li>Изменения в V8 C++ API означают увеличение <em>минорной</em> версии, если они могут быть обработаны <a href="https://github.com/rvagg/nan"><code>nan</code></a>-ом, и <em>мажорной</em> в противном случае.</li>
+				</ul>
+			</li>
+		</ul>
+			<p class="note">Из раздела <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Политика Стабильности</a> Плана Развития. Желающие помочь, добро пожаловать!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Каналы</h2>
+		<table>
+		<tr>
+			<th scope="row">Release</th>
+			<td>Любая сборка, имеющая версию.<br> <strong>Должна быть стабильна и готова для продакшена</strong>.</td>
+		</tr>
+		<tr>
+			<th scope="row">Canary</th>
+			<td>Ночные сборки с V8 Canary и другие новые возможности.</td>
+		</tr>
+		<tr>
+			<th scope="row">NG</th>
+			<td>API следующего поколения, относящееся к ES6/7.</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<p class="note">Из <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Плана Развития</a>. Желающие помочь, добро пожаловать!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>NG (Следующее поколение)</h2>
+
+		<ul>
+			<li>Новая платформа для JavaScript приложений.</li>
+			<li>Будет полностью поддерживать обратную совместимость.</li>
+			<li>Новые API могут быть ориентированы на ES6/7, не нарушая при этом работу старых модулей и API.</li>
+			<li>Отделяет работу над будующим API от улучшений в текущую платформу.</li>
+		</ul>
+		<br>
+		<p class="note">Обсуджения следующего поколения продолжаются в <a href="https://github.com/iojs/ng">репозитории NG</a>.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Отладка и Трассировка</h2>
+		<blockquote>
+			<p>Ядро, скорее, должно включать большую и разнообразную экосистему инструментов для отладки и трассировки, чем предлагать такие высокоуровневые абстракции как <code>domains</code>.</p>
+		</blockquote>
+		<ul>
+			<li>Интегрироваться с <code>trace_event</code> (Новое API трассировки для V8 и Chrome).</li>
+			<li>Документировать и продвигать экосистему отладки.</li>
+			<li>Унифицировать систему трассировки (DTrace, LTTng, etc).</li>
+		</ul>
+		<p class="note">Работу ведёт <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Желающие помочь, добро пожаловать!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Потоки</h2>
+		<ul>
+			<li><strong>Streams Working Group</strong> приняла <code>readable-stream</code>, который сейчас является официальным модулем io.js для <code>потоков</code>.</li>
+			<li>Решить все существующие проблемы с совместимостью.</li>
+			<li>Упростить создание потоков во избежание ошибок пользователей.</li>
+			<li>Исследовать интерфейс <a href="https://github.com/whatwg/streams">WHATWG Streams</a> и установить проблемы с совместимостью.</li>
+			<li>Улучшить производительность потоков.</li>
+		</ul>
+		<p class="note">Работу ведёт <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Желающие помочь, добро пожаловать!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Долгосрочная поддержка</h2>
+
+		<ul>
+			<li>Новые релизы будут поставляться совместно со стабильными и поддерживаемыми зависимостями.</li>
+			<li>Патч-релизы старых версий будут публиковаться до тех пор, пока люди продолжают их активно поддерживать.</li>
+			<li>io.js берет на себя ответственность за старые версии зависимостей, таких как V8, появившихся в прошлых релизах, когда люди, отвечающие за их поддержку, прекращают её.</li>
+		</ul>
+		<br>
+		<p class="note">Резюме <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Политики Стабильности</a>. Желающие помочь, добро пожаловать!</p>
+	</div></section>
+
+	<section class="slide" id="Localization"><div>
+		<h2>Локализация</h2>
+
+		<ul>
+			<li>Уменьшить негативные последствия от включения <code>icu</code> (на бинарник и память).</li>
+			<li>Благоприятствовать развитию энергичного сообщества по локализации.</li>
+				<ul>
+					<li>Автономные языковые сообщества (более 30 зарегестрировано на данный момент).</li>
+					<li>Увеличение количества членов команды, занимающейся продвижением продукта (более 160 членов на данный момент).</li>
+					<li>Улучшение инструментов для перевода веб-сайта, API документации, установщиков и презентаций.</li>
+				</ul>
+		</ul>
+		<p class="note">Вы можете быть вовлечены в процесс, <a href="https://github.com/iojs/website/issues/125">присоединяйтесь к сообществу для вашего языка</a> :)</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Присоединяйтесь!</h2>
+
+		<table>
+		<tr>
+			<th></th>
+			<th scope="column">Ядро</th>
+			<th scope="column">Экосистема</th>
+			<th scope="column">Сообщество</th>
+		</tr>
+		<tr>
+			<th>Код</th>
+			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></td>
+			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
+		</tr>
+		<tr>
+			<th>Evangelism</th>
+			<td><a href="https://github.com/iojs/roadmap">План развития</a></td>
+			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
+			<td><a href="https://github.com/iojs/evangelism">iojs Evangelism WG</a></td>
+		</tr>
+		<tr>
+			<th>i18n</th>
+			<td>ICU</td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">инструменты для документации</a></td>
+			<td><a href="https://github.com/iojs/website/issues/125">присоединиться к <br>сообществу для вашего языка</a></td>
+		</tr>
+		</table>
+
+	</div></section>
+
+	<p class="badge"><a href="https://github.com/iojs/roadmap">Fork me on Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

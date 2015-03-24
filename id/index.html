@@ -47,8 +47,8 @@
 	</header>
 	<div class="clearfix"></div>
 	<section class="slide cover" id="Cover"><div>
-		<h2>Masa Depan Cerah dari io.js</h2>
-		<p>Sebuah Roadmap Berbasis Komunitas</p>
+		<h2>Masa Depan yang Cerah dari io.js</h2>
+		<p>Sebuah <em>Roadmap</em> Berbasis Komunitas</p>
 		<img src="../pictures/cover.jpg" alt="">
 		<!--
 			To apply styles to the certain slides
@@ -76,7 +76,7 @@
 
 	<section class="slide"><div>
 		<h2>Untuk komunitas, dari komunitas</h2>
-		<p><strong>io.js</strong> adalah sebuah pengganti drop-in untuk node.js dan cocok dengan hampir semua modul di <strong>npm</strong>.
+		<p><strong>io.js</strong> adalah sebuah pengganti untuk node.js dan kompatibel dengan hampir semua modul dalam <strong>npm</strong>.
 		</p>
 		<p><strong>io.js</strong> adalah sebuah proyek <em>open source</em> berbasis komunitas. Proyek ini dimulai oleh para kontributor utama node.js, tetapi pada beberapa bulan pertama sudah bisa menarik lebih banyak developer yang aktif dibandingkan dengan keseluruhan developer proyek node.js itu sendiri.</p>
 
@@ -90,7 +90,7 @@
 			<li><em>Streams</em> yang Lebih Baik</li>
 			<li>Dukungan Jangka Panjang</li>
 			<li>Mengutamakan standar yang berkelanjutan</li>
-			<li>Lokalisasi</li>
+			<li>Pelokalan</li>
 		</ol>
 		<p class="note">Pertimbangan di atas dikompilasi dari proyek <a href="https://github.com/iojs/roadmap">roadmap</a>. Kami masih mengharapkan kontribusi Anda.</p>
 	</div></section>
@@ -98,14 +98,14 @@
 	<section class="slide"><div style="padding-top:50px;">
 		<h2>Kebijakan Stabilitas</h2>
 		<blockquote>
-			<p>Kami punya ekosistem package terbesar dari semua bahasa, kami tidak bisa merusaknya.</p>
+			<p>Kami memiliki ekosistem <em>package</em> terbesar dari semua bahasa, yang membuat io.js sangat stabil.</p>
 		</blockquote>
 		<ul>
 			<li>Kami tidak menghapus API JS.</li>
-			<li><a href="http://semver.org"><em>Semantic Versioning</em></a>
+			<li><a href="http://semver.org">Sistem pengaturan versi yang semantik (<em>Semantic Versioning</em>)</a>
 				<ul>
 					<li>Setiap penambahan API, akan ada perubahan versi <em>minor</em>.</li>
-					<li>Setiap perubahan di API C++ V8 akan ditangani oleh <a href="https://github.com/rvagg/nan"><code>nan</code></a> dan akan ada perubahan versi <em>minor</em> juga. Sedangkan peningkatan versi <em>mayor</em> akan terjadi jika perubahan API terjadi di luar kemampuan nan.</li>
+					<li>Setiap perubahan di API C++ V8 akan ditangani oleh <a href="https://github.com/rvagg/nan"><code>nan</code></a> dan akan ada perubahan versi <em>minor</em>. Sedangkan peningkatan versi <em>major</em> akan terjadi jika perubahan API terjadi di luar kemampuan nan.</li>
 				</ul>
 			</li>
 		</ul>
@@ -121,39 +121,39 @@
 		</tr>
 		<tr>
 			<th scope="row"><em>Canary</em></th>
-			<td>Build <em>nightly</em> dengan Canary V8 & fitur-fitur baru lainnya.</td>
+			<td><em>Build</em> harian dengan Canary V8 & fitur-fitur baru lainnya.</td>
 		</tr>
 		<tr>
 			<th scope="row">NG</th>
-			<td>Berpusat pada API Next Generation ES6/7.</td>
+			<td>API yang berpusat pada Next Generation ES6/7.</td>
 		</tr>
 		</table>
 		<br>
 		<br>
-		<p class="note">Dari <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Roadmap</a>. Kami masih mengharapkan kontribusi Anda.</p>
+		<p class="note">Dari proyek <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Roadmap</a>. Kami masih mengharapkan kontribusi Anda.</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>NG (Next Generation)</h2>
 
 		<ul>
-			<li>Sebuah platform baru untuk Aplikasi-aplikasi JavaScript modern.</li>
-			<li>Akan tetap <em>backward compatible</em> tanpa patokan waktu.</li>
-			<li>API baru dapat berpusat pada ES6/7 tanpa merusak modul-modul dan API yang lama.</li>
-			<li>Memisahkan kerja dalam API untuk kedepannya dari penyempurnaan untuk platform terkini.</li>
+			<li>Sebuah platform baru untuk aplikasi-aplikasi JavaScript modern.</li>
+			<li>Akan tetap memiliki kompatibilitas dengan versi sebelumnya (<em>backward compatible</em>) tanpa patokan waktu.</li>
+			<li>API-API baru dapat berpusat pada ES6/7 tanpa merusak modul-modul dan API yang lama.</li>
+			<li>Proses pengembangan API yang terpisah dengan proses penyempurnaan untuk platform terkini.</li>
 		</ul>
 		<br>
-		<p class="note">Diskusi NG selalu berlangsung dalam <a href="https://github.com/iojs/ng">repo NG</a>.</p>
+		<p class="note">Diskusi tentang NG dapat ditemukan dalam <a href="https://github.com/iojs/ng">repo NG</a>.</p>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Debugging & Tracing</h2>
 		<blockquote>
-			<p>Core selalu mengizinkan sebuah ekosistem alat-alat debugging dan tracing yang sangat besar dan beraneka ragam daripada mengesahkan <em>high level abstractions</em> seperti <code>domains</code>.</p>
+			<p>Suatu inti akan menumbuhkan suatu ekosistem sarana debugging dan penelusuran (<em>tracing</em>) yang besar dan beraneka ragam daripada hanya mendukung <em>high level abstractions</em> seperti <code>domains</code>.</p>
 		</blockquote>
 		<ul>
-			<li>Berintegrasi dengan <code>trace_event</code> (API trace baru untuk V8 & Chrome).</li>
-			<li>Dokumentasi dan meng-<em>evangelize</em> sebuah ekosistem debugging.</li>
+			<li>Integrasi dengan <code>trace_event</code> (API penelusuran baru untuk V8 & Chrome).</li>
+			<li>Mendokumentasi dan mempelopori sebuah ekosistem debugging.</li>
 			<li>Menyatukan <em>system tracing endpoint</em> (DTrace, LTTng, etc)</li>
 		</ul>
 		<p class="note">Kegiatan ini dipimpin oleh <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Kami masih mengharapkan kontribusi Anda.</p>

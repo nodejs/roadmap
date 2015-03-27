@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="id">
+<head>
+	<title>Roadmap io.js</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<style>
+	h2 {
+		font-size:120%;
+	}
+	li {
+		margin-left:30px;
+	}
+	ul#translations li {
+		margin-left:50px;
+		float:left;
+	}
+	ul#translations {
+		padding-bottom:70px;
+	}
+	.clearfix {
+		overflow: auto;
+		clear: both;
+	}
+	</style>
+	<header class="caption">
+		<h1>Roadmap io.js</h1>
+		<p>Dokumen Hidup: Disunting terakhir kali pada tanggal 26 Februari 2015.</p>
+		<h2>Terjemahan-terjemahan</h2>
+		<ul id="translations">
+			<li><a href="http://roadmap.iojs.org/cn/">简体中文</a></li>
+			<li><a href="http://roadmap.iojs.jp/">日本語</a></li>
+			<li><a href="http://roadmap.iojs.org/he/">עברית</a></li>
+			<li><a href="http://roadmap.iojs.org/fr/">Français</a></li>
+			<li><a href="http://roadmap.iojs.org/ko/">한국어</a></li>
+			<li><a href="http://roadmap.iojs.org/id/">Bahasa Indonesia</a></li>
+			<li><a href="http://roadmap.iojs.org/ru/">Русский</a></li>
+			<li><a href="http://roadmap.iojs.org/uk/">Українська</a></li>
+			<li><a href="http://roadmap.iojs.org/es/">Español</a></li>
+			<li><a href="http://roadmap.iojs.org/pt-PT/">Português (Portugal)</a></li>
+			<li><a href="http://roadmap.iojs.org/pt-BR/">Português (Brazil)</a></li>
+		</ul>
+	</header>
+	<div class="clearfix"></div>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Masa Depan yang Cerah dari io.js</h2>
+		<p>Sebuah <em>Roadmap</em> Berbasis Komunitas</p>
+		<img src="../pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Untuk komunitas, dari komunitas</h2>
+		<p><strong>io.js</strong> adalah sebuah pengganti untuk node.js dan kompatibel dengan hampir semua modul dalam <strong>npm</strong>.
+		</p>
+		<p><strong>io.js</strong> adalah sebuah proyek <em>open source</em> berbasis komunitas. Proyek ini dimulai oleh para kontributor utama node.js, tetapi pada beberapa bulan pertama sudah bisa menarik lebih banyak developer yang aktif dibandingkan dengan keseluruhan developer proyek node.js itu sendiri.</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Apa saja yang diharapkan dari io.js?</h2>
+		<ol>
+			<li>Stabilitas</li>
+			<li>Transparansi (<em>Debugging</em> dan <em>Tracing</em>)</li>
+			<li><em>Streams</em> yang Lebih Baik</li>
+			<li>Dukungan Jangka Panjang</li>
+			<li>Mengutamakan standar yang berkelanjutan</li>
+			<li>Pelokalan</li>
+		</ol>
+		<p class="note">Pertimbangan di atas dikompilasi dari proyek <a href="https://github.com/iojs/roadmap">roadmap</a>. Kami masih mengharapkan kontribusi Anda.</p>
+	</div></section>
+
+	<section class="slide"><div style="padding-top:50px;">
+		<h2>Kebijakan Stabilitas</h2>
+		<blockquote>
+			<p>Kami memiliki ekosistem <em>package</em> terbesar dari semua bahasa, yang membuat io.js sangat stabil.</p>
+		</blockquote>
+		<ul>
+			<li>Kami tidak menghapus API JS.</li>
+			<li><a href="http://semver.org">Sistem pengaturan versi yang semantik (<em>Semantic Versioning</em>)</a>
+				<ul>
+					<li>Setiap penambahan API, akan ada perubahan versi <em>minor</em>.</li>
+					<li>Setiap perubahan di API C++ V8 akan ditangani oleh <a href="https://github.com/rvagg/nan"><code>nan</code></a> dan akan ada perubahan versi <em>minor</em>. Sedangkan peningkatan versi <em>major</em> akan terjadi jika perubahan API terjadi di luar kemampuan nan.</li>
+				</ul>
+			</li>
+		</ul>
+			<p class="note">Dari bagian <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Kebijakan Stabilitas</a> dari Roadmap. Kami masih mengharapkan kontribusi Anda.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Saluran-saluran</h2>
+		<table>
+		<tr>
+			<th scope="row"><em>Release</em></th>
+			<td>Build yang memiliki versi apapun.<br> <strong>Harus stabil dan siap untuk produksi</strong>.</td>
+		</tr>
+		<tr>
+			<th scope="row"><em>Canary</em></th>
+			<td><em>Build</em> harian dengan Canary V8 & fitur-fitur baru lainnya.</td>
+		</tr>
+		<tr>
+			<th scope="row">NG</th>
+			<td>API yang berpusat pada Next Generation ES6/7.</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<p class="note">Dari proyek <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Roadmap</a>. Kami masih mengharapkan kontribusi Anda.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>NG (Next Generation)</h2>
+
+		<ul>
+			<li>Sebuah platform baru untuk aplikasi-aplikasi JavaScript modern.</li>
+			<li>Akan tetap memiliki kompatibilitas dengan versi sebelumnya (<em>backward compatible</em>) tanpa patokan waktu.</li>
+			<li>API-API baru dapat berpusat pada ES6/7 tanpa merusak modul-modul dan API yang lama.</li>
+			<li>Proses pengembangan API yang terpisah dengan proses penyempurnaan untuk platform terkini.</li>
+		</ul>
+		<br>
+		<p class="note">Diskusi tentang NG dapat ditemukan dalam <a href="https://github.com/iojs/ng">repo NG</a>.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Debugging & Tracing</h2>
+		<blockquote>
+			<p>Suatu inti akan menumbuhkan suatu ekosistem sarana debugging dan penelusuran (<em>tracing</em>) yang besar dan beraneka ragam daripada hanya mendukung <em>high level abstractions</em> seperti <code>domains</code>.</p>
+		</blockquote>
+		<ul>
+			<li>Integrasi dengan <code>trace_event</code> (API penelusuran baru untuk V8 & Chrome).</li>
+			<li>Mendokumentasi dan mempelopori sebuah ekosistem debugging.</li>
+			<li>Menyatukan <em>system tracing endpoint</em> (DTrace, LTTng, etc)</li>
+		</ul>
+		<p class="note">Kegiatan ini dipimpin oleh <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Kami masih mengharapkan kontribusi Anda.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Streams</h2>
+		<ul>
+			<li><strong>Streams Working Group</strong> telah mengambil alih <code>readable-stream</code>, yang adalah modul resmi io.js <code>stream</code>.</li>
+			<li>Memperbaiki semua masalah-masalah kompatibilitas yang ada.</li>
+            <li>Menyederhanakan pembuatan stream untuk menghindari kesalahan pengguna.</li>
+			<li>Menjelajah interface <a href="https://github.com/whatwg/streams">WHATWG Streams</a> dan mengidentifikasi masalah-masalah kompatibilitas.</li>
+			<li>Meningkatkan performa stream.</li>
+		</ul>
+		<p class="note">Kegiatan ini dipimpin oleh <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Kami masih mengharapkan kontribusi Anda.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Dukungan Jangka Panjang</h2>
+
+		<ul>
+			<li>Jalur rilis baru akan diluncurkan dengan dependensi yang stabil dan <em>supported</em>.</li>
+			<li>Rilis-rilis patch dari versi sebelumnya akan tetap dipublikasikan selama orang-orang aktif berkontribusi.</li>
+			<li>io.js akan bertanggung jawab terhadap dependensi versi lama seperti V8 yang tampil di rilis-rilis terdahulu ketika sudah tidak ada lagi <em>support</em> dari kontributornya.</li>
+		</ul>
+		<br>
+		<p class="note">Ringkasan dari <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Kebijakan Stabilitas</a>. Kami masih mengharapkan kontribusi Anda.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Pelokalan</h2>
+
+		<ul>
+			<li>Mengurangi dampak dari pemuatan <code>icu</code> (jejak binari dan memori).</li>
+			<li>Memelihara sebuah komunitas pelokalan yang dinamis.</li>
+				<ul>
+					<li>Komunitas bahasa yang swatantra (30+ komunitas telah terdaftar sejauh ini)</li>
+					<li>Usaha <em>evangelisasi</em> untuk meningkatkan keanggotaan (160+ anggota sejauh ini)</li>
+					<li>Mengembangkan sarana untuk menerjemahkan website, dokumentasi API, installer dan slide-slide presentasi.</li>
+				</ul>
+		</ul>
+		<p class="note">Anda dapat terlibat dengan <a href="https://github.com/iojs/website/issues/125">bergabung dengan komunitas yang sesuai dengan bahasa Anda</a> :)</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Ayo Bergabung!</h2>
+
+		<table>
+		<tr>
+			<th></th>
+			<th scope="column">Core</th>
+			<th scope="column">Ekosistem</th>
+			<th scope="column">Komunitas</th>
+		</tr>
+		<tr>
+			<th>Kode</th>
+			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
+			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
+		</tr>
+		<tr>
+			<th>Evangelism</th>
+			<td><a href="https://github.com/iojs/roadmap">Roadmap</a></td>
+			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
+			<td><a href="https://github.com/iojs/evangelism">iojs Evangelism WG</a></td>
+		</tr>
+		<tr>
+			<th>i18n</th>
+			<td>ICU</td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">doc tooling</a></td>
+			<td><a href="https://github.com/iojs/website/issues/125">Bergabung dengan sebuah <br>komunitas bahasa</a></td>
+		</tr>
+		</table>
+
+	</div></section>
+
+	<p class="badge"><a href="https://github.com/iojs/roadmap">Fork saya di Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

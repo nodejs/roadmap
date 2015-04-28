@@ -9,10 +9,46 @@
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
 </head>
 <body class="list">
+	<style>
+	h2 {
+		font-size:120%;
+	}
+	li {
+		margin-left:30px;
+	}
+	ul#translations li {
+		margin-left:50px;
+		float:left;
+	}
+	ul#translations {
+		padding-bottom:70px;
+	}
+	.clearfix {
+		overflow: auto;
+		clear: both;
+	}
+	</style>
 	<header class="caption">
 		<h1>io.js Feuille de route</h1>
 		<p>Document en évolution: Dernière modification le 26 Février 2015.</p>
+		<h2>Translations</h2>
+		<ul id="translations">
+			<li><a href="http://roadmap.iojs.org/">English</a></li>
+			<li><a href="http://roadmap.iojs.org/cn/">简体中文</a></li>
+			<li><a href="http://roadmap.iojs.jp/">日本語</a></li>
+			<li><a href="http://roadmap.iojs.org/he/">עברית</a></li>
+			<li><a href="http://roadmap.iojs.org/fr/">Français</a></li>
+			<li><a href="http://roadmap.iojs.org/ko/">한국어</a></li>
+			<li><a href="http://roadmap.iojs.org/ru/">Русский</a></li>
+			<li><a href="http://roadmap.iojs.org/uk/">Українська</a></li>
+			<li><a href="http://roadmap.iojs.org/es/">Español</a></li>
+			<li><a href="http://roadmap.iojs.org/pt-PT/">Português (Portugal)</a></li>
+			<li><a href="http://roadmap.iojs.org/pt-BR/">Português (Brazil)</a></li>
+			<li><a href="http://roadmap.iojs.org/id/">Indonesian</a></li>
+			<li><a href="http://roadmap.iojs.org/de/">Deutsch</a></li>
+		</ul>
 	</header>
+	<div class="clearfix"></div>
 	<section class="slide cover" id="Cover"><div>
 		<h2>L’avenir radieux de io.js</h2>
 		<p>Une feuille de route pilotée par la communauté</p>
@@ -127,7 +163,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Débogage & Traçage</h2>
+		<h2>Débogage &amp; Traçage</h2>
 		<blockquote>
 			<p>Le noyau devrait permettre un écosystème massif et diversifié d’outils de débogage et de traçage plutôt qu’entériner des abstractions de haut niveau comme les <code>domains</code>.</p>
 		</blockquote>

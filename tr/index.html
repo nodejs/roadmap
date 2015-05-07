@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="tr">
+<head>
+	<title>io.js Yol Haritası</title>
+	<base href="../" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>io.js Yol Haritası</h1>
+		<p>Güncel Belge: Son Güncelleme Şubat 26'sı, 2015.</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>io.js ile Parlak Gelecek</h2>
+		<p>Topluluğun Yön Verdiği Bir Yol Haritası </p>
+		<img src="pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Topluluk tarafından, topluluk için</h2>
+		<p><strong>io.js</strong> node.js ile yer değiştirmek yerine, tüm npm modülleri ile uyumlu çalışmayı amaçlıyor.</p>
+		<p><strong>io.js</strong> topluluk tarafından açık kaynak şekilde yönetiliyor.Nodejs başlangıcından beri bulunan katkılardan daha çok ilgiliyi çok az bir sürede geliştiriciler tarafından çekmiştir</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>İnsanlar io.js'den Neler İstiyor?</h2>
+		<ol>
+			<li>Kararlılık</li>
+			<li>Şeffaklık (Hata Ayıklama ve İzleme)</li>
+			<li>Daha İyi Akış (Streams)</li>
+			<li>Uzun Vadeli Destek</li>
+			<li>Devam Eden Standartları Benimsemek</li>
+			<li>Yerelleştirme</li>
+		</ol>
+		<p class="note">Fikrini <a href="https://github.com/iojs/roadmap">Yol Haritası</a> projesiden belirtebilirsin. Aramıza hoşgeldin!</p>
+	</div></section>
+
+	<section class="slide"><div style="padding-top:50px;">
+		<h2>İstikrar Politikası</h2>
+		<blockquote>
+			<p>Herhangi bir dilde olduğu gibi büyük bir paket ekosistemine sahibiz, buna ara veremeyiz.</p>
+		</blockquote>
+		<ul>
+			<li>JS API kaldırmıyoruz.</li>
+			<li><a href="http://semver.org">Semantik Versiyonlama</a>
+				<ul>
+					<li>Herhangi bir api eklemesi <em>minor</em> versiyon artışı anlamına geliyor.</li>
+					<li>V8 C++ API'si ile yapılan değişiklikler <code>nan</code> tarafından <em>minor</em>  yada <em>major</em> şeklinde sürüm artışı sağlıyoruz</li>
+				</ul>
+			</li>
+		</ul>
+			<p class="note"></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Kanallar</h2>
+		<table>
+		<tr>
+			<th scope="row">Sürüm</th>
+			<td>Herhangi oluşturulmuş bir sürüm.<br> <strong>Kararlı sürüm production için kullanılabilir</strong>.</td>
+		</tr>
+		<tr>
+			<th scope="row">Canary</th>
+			<td>Gecelik derlemeler ve Canary V8 & diğer yeni özellikler.</td>
+		</tr>
+		<tr>
+			<th scope="row">NG</th>
+			<td>Yeni nesil ES6/7 merkezli API.</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<p class="note">Fikrini <a href="https://github.com/iojs/roadmap">Yol Haritası</a> projesiden belirtebilirsin. Aramıza hoşgeldin!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>YN (Yeni Nesil)</h2>
+
+		<ul> 
+			<li>Modern javascript uygulamaları için yeni bir platform.</li>
+			<li>Geriye dönük uyumsuzlukları bırakmak.</li>
+			<li>Eski modülleri <code>API</code> bozmadan ES6/7 merkezli <code>API</code> uyarlamak</li>
+			<li><code>API</code> geleceği için çalışmları tek bir platform üzerinde toplamak</li>
+		</ul>
+		<br>
+		<p class="note">YN konusunda fikir alışverişi için <a href="https://github.com/iojs/ng">YN Kaynağı</a>.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Hata ayıklama ve İzleme</h2>
+		<blockquote>
+			<p>Çekirdek hata ayıklama ve izleme araçları büyük ve farklı ekosistemler de oldukça önemli bir önceliğe sahiptir örneğin <code>domainler</code> gibi.</p>
+		</blockquote>
+		<ul>
+			<li><code>trace_event</code> ile entegrasyon (V8 ve Chrome için yeni izleme API desteği).</li>
+			<li>Hata ayıklama ve dökümantasyonu yaymak.</li>
+			<li>Son nokta ile izleme sistemini birleştirme. (DTrace, LTTng, vb.)</li>
+		</ul>
+		<p class="note"> <a href="https://github.com/iojs/tracing-wg">İzleme Çalışma Grubu</a> liderliğinde çalışın. Merhaba destekçiler!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Akış</h2>
+		<ul>
+			<li><strong>Akış Çalışma Grubu</strong> <code>readable-stream</code> modülünü, resmi io.js ile <code>stream</code> modülü ile değiştirdi.</li>
+			<li>Tüm uyumluluk sorunları giderildi.</li>
+      <li>Akış sırasında kullanıcı hatası oluşturma basitleştirilecek.</li>
+			<li>Gözatın <a href="https://github.com/whatwg/streams">WHATWG Akışlar</a> arayüz ve uyumluluk sorunlarını belirlemek.</li>
+			<li>Akış performansı arttırılacak.</li>
+		</ul>
+		<p class="note"><a href="https://github.com/iojs/readable-stream">Akış Çalışma Grubu</a> liderliğinde çalışın. Destekçiler merhaba!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Uzun Süreli Destek</h2>
+
+		<ul>
+			<li>Yeni sürüm çizgisi stabil ve desteklenen bağımlılıkara göre belirlenecektir.</li>
+			<li>Eski derleme yamaları üzerinde çalışan kullanıcıları uzun süre yayınlayacağız.</li>
+			<li>io.js eski sürümlerde ki V8 bağımlılıkları koruyacak sorumluluğu gösterecektir. Bu sorumluluk V8 geliştiricileri önceki sürümlere desteklerini sonlandırdıklarına kadar devam edecektir.</li>
+		</ul>
+		<br>
+		<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Kararlılık Politikası</a> özeti. Destekçiler merhaba!</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Yerelleştirme</h2>
+
+		<ul>
+			<li><code>icu</code> dahilinde ki etkisini azaltmak (ikili ve hafıza izi).</li>
+			<li>Canlı yerelleştirme toplulukları teşvik edilecek.</li>
+				<ul>
+					<li>Otonom dil toplulukları (Şimdiden otuzdan fazla)</li>
+					<li>Yaygınlaştırma çalışmaları ile üyelikleri büyütmek (Şimdiden yüz altmıştan fazla)</li>
+					<li>Website yerelleştirme araçları, API dökümanları, yükleyicileri ve sunum katları geliştirilecek.</li>
+				</ul>
+		</ul>
+		<p class="note">Sizde dahil olun, <a href="https://github.com/iojs/website/issues/125"> kendi dilinizin topluluğuna katılın</a> :)</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Aramıza Katılın!</h2>
+
+		<table>
+		<tr>
+			<th></th>
+			<th scope="column">Çekirdek</th>
+			<th scope="column">Ekosistem</th>
+			<th scope="column">Topluluk</th>
+		</tr>
+		<tr>
+			<th>Code</th>
+			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
+			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
+		</tr>
+		<tr>
+			<th>Evangelism</th>
+			<td><a href="https://github.com/iojs/roadmap">Yol Haritası</a></td>
+			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
+			<td><a href="https://github.com/iojs/evangelism">iojs Yaygınlaştırma Çalışma Grubu</a></td>
+		</tr>
+		<tr>
+			<th>i18n</th>
+			<td>ICU</td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">dök. araçları</a></td>
+			<td><a href="https://github.com/iojs/website/issues/125">bir dil <br>topluluğuna</a> katılın.</td>
+		</tr>
+		</table>
+
+	</div></section>
+
+	<p class="badge"><a href="https://github.com/iojs/roadmap">Github üstünde Fork edin.</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

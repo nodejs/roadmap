@@ -1,18 +1,21 @@
 roadmap
 =======
 
-Gathering feedback from the community to inform roadmap.
+This repository's issue tracker is used to discuss the 
+[Node.js Roadmap](https://github.com/nodejs/node/blob/master/ROADMAP.md).
+
+The code hosted here is for the legacy [io.js Roadmap](http://roadmap.iojs.org/) website and no further changes
+(Pull Requests) are needed.
+
 
 Contributors Welcome
 --------------------
 
- * [Current Roadmap](https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md)
- * [Tracing Working Group](https://github.com/iojs/tracing-wg)
- * [Streams Working Group](https://github.com/iojs/readable-stream)
+Please use the issue tracker to share your ideas and participate on roadmap topics.
 
  ## People
 
- Current WG Members:
+Current WG Members:
 
 * Mikeal Rogers (@mikeal)
 * Bert Belder (@piscisaureus)

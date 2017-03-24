@@ -1,13 +1,7 @@
-# Node.js roadmap
-
-This repository's issue tracker is used to discuss the 
-[Node.js Roadmap](https://github.com/nodejs/node/blob/master/ROADMAP.md).
+# Legacy io.js Roadmap
 
 The code hosted in the `gh-pages` branch is for the legacy [io.js Roadmap](http://roadmap.iojs.org/) website and no further changes (Pull Requests) are needed.
 
-Please use the issue tracker to share your ideas and participate on roadmap topics.
-
 ## Members
 
-The Roadmap working group has been retired. The [CTC](https://github.com/nodejs/CTC) now maintains updates to the [Roadmap](https://github.com/nodejs/node/blob/master/ROADMAP.md).
-
+The Roadmap working group has been retired.
